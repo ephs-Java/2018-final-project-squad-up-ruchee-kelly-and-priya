@@ -14,8 +14,10 @@ Our project is a game, sort of like Flappy Bird; here are some components
 
 5.) For loops, calling different methods
 
+
 This game is exactly like flappy bird
 The player will be using keys to move the bird around
+
 
 Week 1 Goal: Design the interface of Flappy Bird.
 
