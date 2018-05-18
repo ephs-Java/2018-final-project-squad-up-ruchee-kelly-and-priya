@@ -1,5 +1,5 @@
 # final-dix-sept-erledigt
-2017 Final Team Project
+2018 Final Team Project
 Ruchee Sawant, Kelly Pu, and Priya Mehra
 
 Our project is a game, sort of like Flappy Bird; here are some components
