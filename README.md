@@ -19,7 +19,5 @@ This game is exactly like Flappy Bird.
 The player will be using keys to move the bird around.
 
 
-Week 1 Goal: Design the interface of Flappy Bird.
-
 
 
