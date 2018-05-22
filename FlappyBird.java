@@ -1,4 +1,4 @@
-package FlappyBird;
+package flappybird;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -210,10 +210,10 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		g.setColor(Color.orange);
 		g.fillRect(0, HEIGHT - 120, WIDTH, 120);
 
-		g.setColor(Color.green);
+		g.setColor(Color.pink);
 		g.fillRect(0, HEIGHT - 120, WIDTH, 20);
 
-		g.setColor(Color.red);
+		g.setColor(Color.yellow);
 		g.fillRect(bird.x, bird.y, bird.width, bird.height);
 
 		for (Rectangle column : columns)
@@ -232,6 +232,7 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		if (gameOver)
 		{
 			g.drawString("Game Over!", 100, HEIGHT / 2 - 50);
+			g.drawString(String.valueOf(score), WIDTH / 2 - 25, 100);
 		}
 
 		if (!gameOver && started)
