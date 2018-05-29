@@ -21,7 +21,7 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 
 	public static FlappyBird flappyBird;
 
-	public final int WIDTH = 800, HEIGHT = 800;
+	public final int WIDTH = 800, HEIGHT = 650;
 
 	public Renderer renderer;
 
@@ -30,6 +30,8 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 	public ArrayList<Rectangle> columns;
 
 	public int ticks, yMotion, score;
+	
+	public int highScore = 0;
 
 	public boolean gameOver, started;
 
@@ -222,13 +224,26 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		}
 
 		g.setColor(Color.white);
-		g.setFont(new Font("Arial", 1, 100));
+		g.setFont(new Font("Arial", 1, 25));
+		
+		g.drawString("High Score: " + highScore, 620, HEIGHT - 620);
 
+		g.setColor(Color.white);
+		g.setFont(new Font("Arial", 1, 100));
+		
 		if (!started)
 		{
 			g.drawString("Click to start!", 75, HEIGHT / 2 - 50);
+			
+			g.setColor(Color.white);
+			g.setFont(new Font("Arial", 1, 25));
+			g.drawString("Use the space bar or mousepad to jump.", 160, HEIGHT - 500);
+			g.drawString("Try not to hit the green tubes!", 240, HEIGHT - 470);
 		}
 
+		g.setColor(Color.white);
+		g.setFont(new Font("Arial", 1, 100));
+		
 		if (gameOver)
 		{
 			g.drawString("Game Over!", 100, HEIGHT / 2 - 50);
@@ -238,6 +253,10 @@ public class FlappyBird implements ActionListener, MouseListener, KeyListener
 		if (!gameOver && started)
 		{
 			g.drawString(String.valueOf(score), WIDTH / 2 - 25, 100);
+			
+			if (score > highScore){
+				highScore = score;
+			}
 		}
 	}
 
